@@ -6,23 +6,28 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 // importiamo il contesto creato (Global)
 import GlobalContext from './contexts/GlobalContext';
+// import film page
+import FilmsPage from "./pages/FilmsPage";
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-
   const [film, setFilm] = useState([]);
 
-    // Fetching dei dati
-    function fetchFilms() {
-      axios.get("https://api.themoviedb.org/3/discover/movie?api_key=15eff770124af6cb0018e75397b366e9")
-        .then((res) => 
-          console.log(res.data)
-          
-        )
-    }
+  useEffect(() => {
+    const fetchFilms = async () => {
+      try {
+        const res = await axios.get(
+          `https://api.themoviedb.org/3/search/movie?api_key=15eff770124af6cb0018e75397b366e9&query=amityville`
+        );
+        setFilm(res.data.results);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
-    useEffect(fetchFilms, []);
+    fetchFilms();
+  }, []);
   
 
   return (
@@ -33,7 +38,7 @@ function App() {
               <BrowserRouter>
                   <Routes>
                       <Route>
-                         
+                        <Route index element={<FilmsPage />} />
                       </Route>
                   </Routes>
               </BrowserRouter>
