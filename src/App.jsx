@@ -9,7 +9,7 @@ import GlobalContext from './contexts/GlobalContext';
 // import film page
 import FilmsPage from "./pages/FilmsPage";
 // import default layout
-import DefaultLayout from './layouts/DefaultLayout';
+import DefaultLayout from './layouts/DefaultLayout.jsx';
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 

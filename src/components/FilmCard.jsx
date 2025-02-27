@@ -1,32 +1,14 @@
-
-const FilmCard = (props) => {
-
-    // destructuring dell'oggetto props
-    const { movie } = props;
-
-    
-
+function FilmCard({ movie }) {
     return (
-        <>
-
-            <div className="card m-3">
-                <div className="card-header">
-                <h4 className="card-title">{movie.title}</h4>
-                </div>
-
-                <div className="card-body">
-                    <p className="card-text">{movie.original_title}</p>
-                    <p className="card-text">{movie.original_language}</p>
-                    <p className="card-text">{movie.vote_average}</p>
-                    
-                </div>
-            </div>
-
-                
-
-        </>
-    )
-
-}
-
-export default FilmCard
+      <div>
+        <h2>{movie.title}</h2>
+        <img
+          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+          alt={movie.title}
+        />
+        <p>{movie.overview}</p>
+      </div>
+    );
+  }
+  
+  export default FilmCard;
