@@ -1,26 +1,20 @@
-// import degli elementi della libreria di gestione delle rotte
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-// import use state use effect
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-// import axios
 import axios from "axios";
-// importiamo il contesto creato (Global)
 import GlobalContext from './contexts/GlobalContext';
-// import film page
 import FilmsPage from "./pages/FilmsPage";
-// import default layout
-import DefaultLayout from './layouts/DefaultLayout.jsx';
-// bootstrap
+import DefaultLayout from './layouts/DefaultLayout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [film, setFilm] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("amityville");
 
   useEffect(() => {
     const fetchFilms = async () => {
       try {
         const res = await axios.get(
-          `https://api.themoviedb.org/3/search/movie?api_key=15eff770124af6cb0018e75397b366e9&query=amityville`
+          `https://api.themoviedb.org/3/search/movie?api_key=15eff770124af6cb0018e75397b366e9&query=${searchTerm}`
         );
         setFilm(res.data.results);
       } catch (error) {
@@ -29,26 +23,20 @@ function App() {
     };
 
     fetchFilms();
-  }, []);
+  }, [searchTerm]);
   
 
   return (
-    <>
-
-        <>
-          <GlobalContext.Provider value={{ film }}>
-              <BrowserRouter>
-                  <Routes>
-                      <Route  element={<DefaultLayout />}>
-                        <Route index element={<FilmsPage />} />
-                      </Route>
-                  </Routes>
-              </BrowserRouter>
-          </GlobalContext.Provider>
-      </>
-      
-    </>
-  )
+    <GlobalContext.Provider value={{ film, setSearchTerm }}>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route index element={<FilmsPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </GlobalContext.Provider>
+  );
 }
 
-export default App
+export default App;
