@@ -8,6 +8,8 @@ import axios from "axios";
 import GlobalContext from './contexts/GlobalContext';
 // import film page
 import FilmsPage from "./pages/FilmsPage";
+// import default layout
+import DefaultLayout from './layouts/DefaultLayout';
 // bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -37,7 +39,7 @@ function App() {
           <GlobalContext.Provider value={{ film }}>
               <BrowserRouter>
                   <Routes>
-                      <Route>
+                      <Route  element={<DefaultLayout />}>
                         <Route index element={<FilmsPage />} />
                       </Route>
                   </Routes>
