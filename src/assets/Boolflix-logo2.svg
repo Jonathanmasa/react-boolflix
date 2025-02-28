@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_1" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2500 2500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c20000;
+      }
+
+      .cls-2 {
+        fill: url(#Sfumatura_senza_nome);
+      }
+
+      .cls-3 {
+        fill: url(#Sfumatura_senza_nome_7);
+      }
+
+      .cls-4 {
+        fill: #fa0000;
+      }
+    </style>
+    <linearGradient id="Sfumatura_senza_nome" data-name="Sfumatura senza nome" x1="853.45" y1="1591.29" x2="921.82" y2="1642.9" gradientTransform="translate(-3965.14 9458.01) scale(5.21 -5.21)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#c20000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#9d0000"/>
+    </linearGradient>
+    <linearGradient id="Sfumatura_senza_nome_7" data-name="Sfumatura senza nome 7" x1="565.25" y1="1250" x2="2043.64" y2="1250" gradientUnits="userSpaceOnUse">
+      <stop offset=".27" stop-color="#9d0000"/>
+      <stop offset=".53" stop-color="#a00" stop-opacity=".63"/>
+      <stop offset="1" stop-color="#c20000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-2" d="M1043.74,0h-478.49v1912.85c156.92-37.16,320.84-55.77,478.49-62.77V0Z"/>
+  <path class="cls-4" d="M565.25,0h721.8C1782.75,0,1995.81,189.28,1995.81,575v100c0,257.14-95.66,417.86-308.72,489.29v7.14c256.54,71.43,356.55,257.14,356.55,521.43v214.29c0,385.71-212.08,525.96-690.38,525.96,0,0-239.38,7.46-309.52,4.13-120.51-5.73-478.49,62.77-478.49,62.77V0ZM1230.52,1017.86c178.28,0,286.98-64.29,286.98-264.29v-139.29c0-178.57-73.92-257.14-243.5-257.14h-230.46v660.71h186.97ZM1317.49,2142.86c160.88,0,247.85-60.71,247.85-246.43v-217.86c0-232.14-91.31-303.57-308.72-303.57h-213.06v767.86h273.94Z"/>
+  <path class="cls-3" d="M565.25,0h721.8C1782.75,0,1995.81,189.28,1995.81,575v100c0,257.14-95.66,417.86-308.72,489.29v7.14c256.54,71.43,356.55,257.14,356.55,521.43v214.29c0,385.71-212.08,525.96-690.38,525.96,0,0-239.38,7.46-309.52,4.13-120.51-5.73-478.49,62.77-478.49,62.77V0ZM1230.52,1017.86c178.28,0,286.98-64.29,286.98-264.29v-139.29c0-178.57-73.92-257.14-243.5-257.14h-230.46v660.71h186.97ZM1317.49,2142.86c160.88,0,247.85-60.71,247.85-246.43v-217.86c0-232.14-91.31-303.57-308.72-303.57h-213.06v767.86h273.94Z"/>
+  <path class="cls-1" d="M1043.74,0h-478.49v2500c156.92-37.16,320.84-55.77,478.49-62.77V0Z"/>
+  <path class="cls-4" d="M1043.74,0h-478.49v2500c156.92-37.16,320.84-55.77,478.49-62.77V0Z"/>
+</svg>

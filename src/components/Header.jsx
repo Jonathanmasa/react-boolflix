@@ -18,7 +18,8 @@ const Header = () => {
   return (
     <header className="bg-dark text-white py-4">
       <div className="container d-flex  justify-content-between align-items-center">
-        <h1 className="mb-0 text-danger">BoolFlix</h1>
+        <img className="my-icon" src="/src/assets/Boolflix-logo2.svg" alt="logo boolflix" />
+        <h1 className="mb-0 title">BoolFlix</h1>
         <div className="d-flex w-75 w-sm-auto mt-3 mt-sm-0">
           <input
             type="text"

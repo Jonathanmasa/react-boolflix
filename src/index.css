@@ -1,3 +1,12 @@
+/* HEADER */
+.my-icon{
+    width: 8%;
+}
+
+.title {
+    color: rgb(231, 24, 24);
+}
+
 /* REGOLE GENERALI CARD */
 .film-card {
     position: relative;
