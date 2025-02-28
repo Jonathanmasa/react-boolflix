@@ -16,19 +16,26 @@ const Header = () => {
   };
 
   return (
-    <header className="d-flex justify-content-between container">
-      <h1 className="mb-5 mt-2">BoolFlix</h1>
-      <div className="mb-5 mt-2">
-        <input
+    <header className="bg-dark text-white py-4">
+      <div className="container d-flex  justify-content-between align-items-center">
+        <h1 className="mb-0 text-danger">BoolFlix</h1>
+        <div className="d-flex w-75 w-sm-auto mt-3 mt-sm-0">
+          <input
             type="text"
+            className="form-control me-2"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Cerca un film o una serie..."
-        />
-        <button onClick={handleSearch} aria-label="Cerca">
+          />
+          <button
+            className="btn btn-outline-light"
+            onClick={handleSearch}
+            aria-label="Cerca"
+          >
             Cerca
-        </button>
+          </button>
+        </div>
       </div>
     </header>
   );
